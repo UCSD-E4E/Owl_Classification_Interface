@@ -15,7 +15,7 @@
 1. Navigate to the Owl_Classifier via termial 
    - Guide to navigate your machine via terminal: https://openclassrooms.com/en/courses/4614926-learn-the-command-line-in-terminal/4634356-navigate-your-system
    - Download python packages using  *pip install -r requirements.txt* 
-   - Unzip ~/Owl_Classification_Interface/MegaDetector.zip
+   - Unzip **~/Owl_Classification_Interface/MegaDetector.zip**
 
 2. Download all the necessary files from the links provided
    - Download [Frozen model (.pb)]https://lilablobssc.blob.core.windows.net/models/camera_traps/megadetector/md_v4.1.0/md_v4.1.0.pb) and save it in the folder **'~/Owl_Classification_Interface/MegaDetector/cameratraps/detection'**
