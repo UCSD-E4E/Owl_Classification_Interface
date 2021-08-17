@@ -17,8 +17,8 @@
    - Download python packages using  *pip install -r requirements.txt* 
 
 2. Download all the necessary files from the links provided
-   - Download [Frozen model (.pb)]https://lilablobssc.blob.core.windows.net/models/camera_traps/megadetector/md_v4.1.0/md_v4.1.0.pb) and save it in the folder **'~/Owl_Classifier/MegaDetector/cameratraps/detection'**
-   - Download [PyTorch_Binary_Classifier.pth]https://drive.google.com/file/d/1y1A23D9wYJBEJ9XTv1Gd8qPiC8SOwVSM/view?usp=sharing) and save it in the folder **'~/Owl_Classifier/Binary_Model'**
+   - Download [Frozen model (.pb)]https://lilablobssc.blob.core.windows.net/models/camera_traps/megadetector/md_v4.1.0/md_v4.1.0.pb) and save it in the folder **'~/Owl_Classification_Interface/MegaDetector/cameratraps/detection'**
+   - Download [PyTorch_Binary_Classifier.pth]https://drive.google.com/file/d/1y1A23D9wYJBEJ9XTv1Gd8qPiC8SOwVSM/view?usp=sharing) and save it in the folder **'~/Owl_Classification_Interface/Binary_Model'**
 
 4. Once this is done no other steps are needed for the setup. **Remember the location of the file 'Owl_model'**
 Note: Setup procedures only needs to be ran once on your machine to run 'terminal_interface.py'
