@@ -1,0 +1,7 @@
+README.md
+setup.py
+Owl_Classifier.egg-info/PKG-INFO
+Owl_Classifier.egg-info/SOURCES.txt
+Owl_Classifier.egg-info/dependency_links.txt
+Owl_Classifier.egg-info/requires.txt
+Owl_Classifier.egg-info/top_level.txt
