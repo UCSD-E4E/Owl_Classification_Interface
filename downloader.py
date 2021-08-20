@@ -2,7 +2,7 @@ import sys
 import requests
 import gdown
 
-FrozenModelURL = "https://lilablobssc.blob.core.windows.net/models/camera_traps/megadetector/md_v4.1.0/md_v4.1.0.pb"
+FrozenModelURL = "https://lilablobssc.blob.core.windows.net/models/camera_traps/megadetector/md_v4.1.0.pb"
 
 BinaryClassifierID = "1y1A23D9wYJBEJ9XTv1Gd8qPiC8SOwVSM"
 BinaryClassifierURL = 'https://drive.google.com/u/0/uc?id=1y1A23D9wYJBEJ9XTv1Gd8qPiC8SOwVSM'
@@ -28,5 +28,5 @@ def download(url, filename, message):
     sys.stdout.write('\n')
 
 
-download(FrozenModelURL, "src/MegaDetector/cameratraps/detection", "Megadetector Frozen Model")
-gdown.download(BinaryClassifierURL, "Binary_Model/PyTorch_Binary_Classifier.pth", quiet=False)
+download(FrozenModelURL, "src/MegaDetector/cameratraps/detection/md_v4.1.0.pb", "Megadetector Frozen Model")
+gdown.download(BinaryClassifierURL, "src/Binary_Model/PyTorch_Binary_Classifier.pth", quiet=False)

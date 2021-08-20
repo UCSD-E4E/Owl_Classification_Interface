@@ -12,23 +12,16 @@
      - Adjusting our model to identify other animals in the non-Owl category
    
 ## Setup for OwlDetect
-1. Navigate to the Owl_Classifier via termial 
-   - Guide to navigate your machine via terminal: https://openclassrooms.com/en/courses/4614926-learn-the-command-line-in-terminal/4634356-navigate-your-system
-   - Download python packages using  *pip install -r requirements.txt* 
-   - Unzip **~/Owl_Classification_Interface/MegaDetector.zip**
+1. Run ``` pip instsall . ``` to install required packages
 
-2. Download all the necessary files from the links provided
-   - Download [Frozen model (.pb)]https://lilablobssc.blob.core.windows.net/models/camera_traps/megadetector/md_v4.1.0/md_v4.1.0.pb) and save it in the folder **'~/Owl_Classification_Interface/MegaDetector/cameratraps/detection'**
-   - Download [PyTorch_Binary_Classifier.pth]https://drive.google.com/file/d/1y1A23D9wYJBEJ9XTv1Gd8qPiC8SOwVSM/view?usp=sharing) and save it in the folder **'~/Owl_Classification_Interface/Binary_Model'**
-
-4. Once this is done no other steps are needed for the setup. **Remember the location of the file 'Owl_model'**
+2. Run ``` python3 downloader.py ``` to download models
 Note: Setup procedures only needs to be ran once on your machine to run 'terminal_interface.py'
 
 
 ## How to run OwlDetect
 1. Get the directory of images you would like analyzed prepared for the pipeline. **The contents of this directory should only be of just images. It will take a while so use a small set if you don't want to wait that long. Unexpected errors may occur if non image files are in directory.**
-2. Run terminal_interface.py
-   - In the terminal, run *python3 terminal_interface.py*
+2. Run main.py
+   - In the terminal, run *python3 main.py*
    - First prompt will ask for the directory path of the directory of images you would like to have analyzed.
    - The MegaDetector will run at this point and this may take some time. **Nothing needs to be done in this step.**
 3. The output of this script will be one CSV file and a folder containing images containing owls:
