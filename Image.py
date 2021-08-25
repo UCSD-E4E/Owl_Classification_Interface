@@ -3,6 +3,8 @@ import pandas as pd
 import os
 import PIL
 import numpy as np
+import shutil
+
 
 # make each image an instance of the class Image that can contain
 # different information on its subimages, etc.
@@ -63,10 +65,11 @@ def save_results(filtered_dir, img_dir, images_folder_path):
         owl_predictions.append(img.contains_owl)
         owl_quantity.append(img.owl_count)
         if img.contains_owl:
-            temp_image = PIL.Image.open(images_folder_path+ '/' + img.file_name)
-            temp_image.save(img.file_name)
-            temp_image.close()
+
+            # move the image to the filter_images folder
+            source = os.path.join(images_folder_path, img.file_name)
+            destination = os.path.join(filtered_sub_dir, img.file_name)
+            shutil.move(source, destination)
 
     user_images_predictions = pd.DataFrame(zip(file_names, owl_predictions, owl_quantity), columns=['Image', 'Owl_Prediction', 'Min_Owls_Detected'])
     user_images_predictions.to_csv(folder_path + '_owl_predictions.csv', index=False)
-
