@@ -1,0 +1,45 @@
+{
+ "images": [
+  {
+   "file": "/Users/hebeilei/E4EProject/Owl_Classification_Interface/image/1.JPG",
+   "max_detection_conf": 0.999,
+   "detections": [
+    {
+     "category": "1",
+     "conf": 0.999,
+     "bbox": [
+      0.4174,
+      0.689,
+      0.2078,
+      0.2824
+     ]
+    }
+   ]
+  },
+  {
+   "file": "/Users/hebeilei/E4EProject/Owl_Classification_Interface/image/0.JPG",
+   "max_detection_conf": 0.999,
+   "detections": [
+    {
+     "category": "1",
+     "conf": 0.999,
+     "bbox": [
+      0.5924,
+      0.07529,
+      0.1991,
+      0.4022
+     ]
+    }
+   ]
+  }
+ ],
+ "detection_categories": {
+  "1": "animal",
+  "2": "person",
+  "4": "vehicle"
+ },
+ "info": {
+  "detection_completion_time": "2021-10-05 16:43:13",
+  "format_version": "1.0"
+ }
+}

@@ -1,0 +1,60 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text>sdvd </help_text><element><id>UMLClass</id><coordinates><x>566</x><y>107</y><w>270</w><h>30</h></coordinates><panel_attributes>Owl Claasification Interface</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>66</x><y>197</y><w>120</w><h>40</h></coordinates><panel_attributes>Output</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>346</x><y>197</y><w>120</w><h>40</h></coordinates><panel_attributes>Models</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>636</x><y>197</y><w>120</w><h>40</h></coordinates><panel_attributes>src</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>266</x><y>327</y><w>120</w><h>40</h></coordinates><panel_attributes>Megadetector</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>436</x><y>327</y><w>120</w><h>40</h></coordinates><panel_attributes>Binary Classifer</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>56</x><y>307</y><w>130</w><h>70</h></coordinates><panel_attributes>_output.csv_
+--
+Reult csv containig 
+labels of input images
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>156</x><y>537</y><w>210</w><h>160</h></coordinates><panel_attributes>run_owl_moel.py
+--
+input: 
+- Classifier Model
+- Image object List
+- Image path
+output:
+- Add owl classificatio ninformation into 
+  the input image object list
+--
+Run our classifier</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>396</x><y>537</y><w>210</w><h>120</h></coordinates><panel_attributes>util.py
+--
+denormalize():
+- Prepare box coordination from the 
+  raw position index 
+--
+non_max_sup():
+- Pick the best box representation
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>936</x><y>537</y><w>270</w><h>210</h></coordinates><panel_attributes>Image.py
+--
+class Image
+--
+- file_name:       path to the image
+- sub_images:   sub-images that contain animals
+- contains_owl:  indictor whether include owls
+- owl_count:       count the number of owls
+--
+load_data():
+- Load data information from JSON file output 
+  from megadetector to list of Image objects
+save_results():
+- Save the contains_owl indicator information in 
+  output csv and organze filtered owl images
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>636</x><y>537</y><w>270</w><h>110</h></coordinates><panel_attributes>main.py
+--
+input: 
+- Image directory path
+output:
+- owl_info.csv 
+- filtered owl images
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>236</x><y>637</y><w>540</w><h>170</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>520;10;520;150;10;150;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>486</x><y>637</y><w>290</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>270;10;270;110;10;110;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>746</x><y>637</y><w>350</w><h>200</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;180;330;180;330;110</additional_attributes></element><element><id>UMLClass</id><coordinates><x>916</x><y>187</y><w>150</w><h>110</h></coordinates><panel_attributes>setup.py
+--
+output:
+- install required packages
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1116</x><y>187</y><w>210</w><h>110</h></coordinates><panel_attributes>downloader.py
+--
+- download megadetector model
+- download owl classifier model
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>116</x><y>127</y><w>600</w><h>90</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;70;10;30;580;30;580;10</additional_attributes></element><element><id>Relation</id><coordinates><x>396</x><y>127</y><w>320</w><h>90</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;70;10;30;300;30;300;10</additional_attributes></element><element><id>Relation</id><coordinates><x>686</x><y>127</y><w>30</w><h>90</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>686</x><y>127</y><w>330</w><h>80</h></coordinates><panel_attributes></panel_attributes><additional_attributes>310;60;310;30;10;30;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>686</x><y>127</y><w>550</w><h>80</h></coordinates><panel_attributes></panel_attributes><additional_attributes>530;60;530;30;10;30;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>316</x><y>227</y><w>110</w><h>120</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;100;10;60;90;60;90;10</additional_attributes></element><element><id>Relation</id><coordinates><x>396</x><y>227</y><w>120</w><h>120</h></coordinates><panel_attributes></panel_attributes><additional_attributes>100;100;100;60;10;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>236</x><y>227</y><w>480</w><h>330</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;310;10;220;460;220;460;10</additional_attributes></element><element><id>Relation</id><coordinates><x>496</x><y>227</y><w>220</w><h>330</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;310;10;220;200;220;200;10</additional_attributes></element><element><id>Relation</id><coordinates><x>686</x><y>227</y><w>110</w><h>330</h></coordinates><panel_attributes></panel_attributes><additional_attributes>90;310;90;220;10;220;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>686</x><y>227</y><w>410</w><h>330</h></coordinates><panel_attributes></panel_attributes><additional_attributes>390;310;390;220;10;220;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>110</x><y>230</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element></diagram>
