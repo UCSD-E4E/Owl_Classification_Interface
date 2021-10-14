@@ -10,8 +10,8 @@ from image_processing import non_max_sup
 
 main_working_dir=os.path.abspath(os.curdir)#current working Directory
 
-detector_working_dir=os.path.join(main_working_dir,'MegaDetector/cameratraps/detection/')
-print(os.path.join(main_working_dir,"/MegaDetector/cameratraps/detection/"))
+detector_working_dir=os.path.join(main_working_dir,'src/MegaDetector/cameratraps/detection/')
+print(os.path.join(main_working_dir,"src/MegaDetector/cameratraps/detection/"))
 print(detector_working_dir)
 
 # set the version of megatector
