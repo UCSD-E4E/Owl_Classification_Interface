@@ -5,8 +5,8 @@ import json
 import Image
 from Image import save_results
 from run_owl_model import run_model
-from image_processing import denormalize
-from image_processing import non_max_sup
+from util import denormalize
+from util import non_max_sup
 
 main_working_dir=os.path.abspath(os.curdir)#current working Directory
 
