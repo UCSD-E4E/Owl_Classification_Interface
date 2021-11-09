@@ -42,4 +42,4 @@ Note: Setup procedures only needs to be ran once on your machine to run 'termina
 ### Tools
 - **"run_owl_model.py"**: This script runs the owl classifier. Accepts an array of all *Image* object and iterates through that to make predictions 
 - **"Image.py"**: This script creates the *Image* object that contains information the image file name, if an owl is contained in an image, the coordinate data on the bounding boxes in an image, and the count of owls. It also contains the function to save the results. 
-- **"image_processing.py"**: This script creates the functions to denormalize the bounding boxes coordinates and a function to perform nonmaximum suppression, 
+- **"util.py"**: This script creates the functions to denormalize the bounding boxes coordinates and a function to perform nonmaximum suppression, 
