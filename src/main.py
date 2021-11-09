@@ -21,6 +21,8 @@ param_threshold="0.1"
 # get the file path containing the images from the user
 images_folder_path = input('Enter the file path of images (Ex. ~/Users/admin/Desktop/owl_images): ')
 
+
+
 if images_folder_path[-1] != '/':
     images_folder_path = images_folder_path + '/'
 
@@ -67,7 +69,7 @@ img_dir = denormalize(img_dir, images_folder_path)
 # implement non max suppression
 img_dir = non_max_sup(img_dir, 0.6)
 
-MODEL_PATH = os.path.join(main_working_dir,'Binary_Model',"PyTorch_Binary_Classifier.pth")
+MODEL_PATH = os.path.join(main_working_dir,'src','Binary_Model',"PyTorch_Binary_Classifier.pth")
 img_dir = run_model(MODEL_PATH, img_dir, images_folder_path)
 
 # create the output as a csv file_name, owl
