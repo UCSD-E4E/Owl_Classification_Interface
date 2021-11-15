@@ -6,7 +6,7 @@ import torch.utils.data
 import torchvision.transforms as transforms
 from PIL import Image
 import pandas as pd
-from OwlDataset import OwlDataset
+from owl_dataset import OwlDataset
 import torch.optim as optim
 import torch.nn as nn
 import argparse
@@ -45,11 +45,11 @@ def main():
     )
 
     # Load the Training Dataset
-    dataset_train = OwlDataset(root= "./NewData",data_annotations= "./NewData/Train.csv",transforms = train_transform)
+    dataset_train = OwlDataset(root= "./Data",data_annotations= "./Data/Train.csv",transforms = train_transform)
     # Load the Validation Dataset
-    dataset_validation = OwlDataset(root= "./NewData",data_annotations= "./NewData/Validation.csv",transforms = val_transform)
+    dataset_validation = OwlDataset(root= "./Data",data_annotations= "./Data/Validation.csv",transforms = val_transform)
     # Load the Test Dataset
-    dataset_test = OwlDataset(root= "./NewData",data_annotations= "./NewData/Test.csv",transforms = val_transform)
+    dataset_test = OwlDataset(root= "./Data",data_annotations= "./Data/Test.csv",transforms = val_transform)
 
     # Create the Training Dataset into a Dataloader
     data_loader = torch.utils.data.DataLoader(dataset_train, batch_size=args.batch_size, shuffle=True)
@@ -133,11 +133,11 @@ def main():
             train_loss = train_loss/len(data_loader)
             valid_loss = valid_loss/len(data_loader_validation)
                 
-            print(f"Epoch: {epoch} \tTraining Loss: {train_loss} \tValidation Loss: {valid_loss}")
+            print("Epoch:", epoch,"\tTraining Loss:", train_loss, "\tValidation Loss: ", valid_loss)
             
             # Save new model if there is a lower validation loss 
             if valid_loss <= valid_loss_min:
-                print(f"Validation loss decreased ({valid_loss_min} --> {valid_loss}).  Saving model")
+                print("Validation loss decreased (",valid_loss_min, " --> ",valid_loss, ").  Saving model")
                 torch.save(model.state_dict(), 'PyTorch_Binary_Classifier.pth')
                 valid_loss_min = valid_loss
 
