@@ -17,7 +17,7 @@ install_requires = [
     "jsonpickle"
 ]
 setup(
-    name="Owl_Classifier",
+    name="Owl_Classifier_interface",
     version='1.0.0',
     packages=find_packages(where='src'),  
     install_requires=install_requires, 

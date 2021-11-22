@@ -8,3 +8,5 @@ src/Binary_Model/PyTorch_Binary_Classifier.pth
 venv/
 *.pyc
 filtered_images/
+detectorjsonFile.json
+image/
