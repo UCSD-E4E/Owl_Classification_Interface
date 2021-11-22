@@ -1,23 +1,7 @@
 {
  "images": [
   {
-   "file": "/Users/hebeilei/E4EProject/Owl_Classification_Interface/image/1.JPG",
-   "max_detection_conf": 0.999,
-   "detections": [
-    {
-     "category": "1",
-     "conf": 0.999,
-     "bbox": [
-      0.4174,
-      0.689,
-      0.2078,
-      0.2824
-     ]
-    }
-   ]
-  },
-  {
-   "file": "/Users/hebeilei/E4EProject/Owl_Classification_Interface/image/0.JPG",
+   "file": "/home/burrowingowl/Owl_Classification_Interface/image/0.JPG",
    "max_detection_conf": 0.999,
    "detections": [
     {
@@ -31,6 +15,22 @@
      ]
     }
    ]
+  },
+  {
+   "file": "/home/burrowingowl/Owl_Classification_Interface/image/1.JPG",
+   "max_detection_conf": 0.999,
+   "detections": [
+    {
+     "category": "1",
+     "conf": 0.999,
+     "bbox": [
+      0.4174,
+      0.689,
+      0.2078,
+      0.2824
+     ]
+    }
+   ]
   }
  ],
  "detection_categories": {
@@ -39,7 +39,7 @@
   "4": "vehicle"
  },
  "info": {
-  "detection_completion_time": "2021-10-05 16:43:13",
+  "detection_completion_time": "2021-11-12 09:02:19",
   "format_version": "1.0"
  }
 }
