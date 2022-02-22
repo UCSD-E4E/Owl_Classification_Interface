@@ -4,6 +4,7 @@ import torch
 import torchvision
 import torch.utils.data
 import torchvision.transforms as transforms
+from tqdm import tqdm
 from PIL import Image
 import pandas as pd
 from owl_dataset import OwlDataset
@@ -98,7 +99,7 @@ def main():
             # train the model
             model.train()
             # TODO load original images and coordinates instead
-            for image, label, name in data_loader:
+            for image, label, name in tqdm(data_loader):
                 if torch.cuda.is_available():
                     image, label = image.cuda(), label.cuda()
                 # Zero the gradients
